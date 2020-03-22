@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
+.shutter{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#1e1e1e;
+  z-index:9999;
+}
+.shutter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background-color:navy;
+  width: 0;
+  height: 1px;
+}
+
+  
   .no0{
     width: 1300px;
     height:400px ;
@@ -238,7 +260,9 @@ h5{font-size: 20px;
 </style>
 </head>
 <body>
-    <img class="no0" src="theme.jpg">
+  <div class="shutter"></div>
+  <section class="container">
+  <img class="no0" src="theme.jpg">
    
   
 
@@ -326,5 +350,6 @@ h5{font-size: 20px;
           <p class="buy10"><b>BUY <a href="https://www.sony.com/electronics/cell-phones/xperia-1/buy"
           target="_blank">Sony Xperia 1</a>NOW</b></p>
          </p>
+</section>       
 </body>
 </html>
